@@ -25,7 +25,7 @@ pipeline {
    
     steps {
     sh "docker rm -f calculatrice || true"
-     sh "docker run -d --rm -p 8882:8888 --name calculatrice   localhost:5000/calculatrice "
+     sh "docker run -d --rm -p 8888:8081 --name calculatrice   localhost:5000/calculatrice "
    
     }
    }
