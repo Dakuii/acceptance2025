@@ -19,6 +19,12 @@ pipeline {
 	sh 'docker push localhost:5000/calculatrice'
     	}
     }
+    
+    stage("Deploy to staging ou Déployer en préproduction"){
+    	steps{
+	sh "docker run -d --rm -p 8888:8081 calculatrice localhost:5000/calculatrice"
+    	}
+    }
        
      
      
