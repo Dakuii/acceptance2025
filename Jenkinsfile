@@ -41,5 +41,11 @@ pipeline {
    
  
   }
+  
+  post {
+      always {
+        sh "docker stop calculatrice"
+      }
+  }
 
 }
