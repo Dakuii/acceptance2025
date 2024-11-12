@@ -16,7 +16,7 @@ pipeline {
     
     stage("Docker push"){
     	steps{
-    	sh "docker push -t localhost:5000/calculatrice ."
+	sh 'docker push localhost:5000/calculatrice'
     	}
     }
        
