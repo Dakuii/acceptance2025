@@ -23,7 +23,7 @@ pipeline {
             steps {
                 // Cleanup previous container if it exists
                 sh "docker rm -f calculatrice || true"
-                
+
                 // Check if port 8888 is already in use
                 script {
                     def portOccupied = sh(script: "lsof -i :8888", returnStatus: true) == 0
